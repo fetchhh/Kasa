@@ -14,7 +14,7 @@ const Place = () => {
   const { placeId } = useParams();
 
   let { isLoading, data, error } = useFetch(
-    `${location.origin}/public/data/logements.json`,
+    `${location.origin}/data/logements.json`,
   );
   data = data.filter((item) => item.id == placeId)[0];
 

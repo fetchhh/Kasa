@@ -9,7 +9,7 @@ import "./index.scss";
 
 const CardsWrapper = () => {
   const { isLoading, data, error } = useFetch(
-    `${location.origin}/public/data/logements.json`,
+    `${location.origin}/data/logements.json`,
   );
 
   return (
