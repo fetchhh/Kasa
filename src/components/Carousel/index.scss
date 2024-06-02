@@ -1,0 +1,49 @@
+.carousel {
+  background-color: black;
+  height: 415px;
+  border-radius: 25px;
+  position: relative;
+  @media (max-width: 768px) {
+    height: 300px;
+  }
+  .slide {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+  }
+
+  .sliders .slider-arrow {
+    width: 48px;
+    height: 80px;
+    cursor: pointer;
+    position: absolute;
+    @media (max-width: 768px) {
+      width: 11px;
+      height: 19px;
+    }
+  }
+
+  .sliders .slider-arrow:nth-child(1) {
+    left: 20px;
+    bottom: 50%;
+    transform: translateY(50%);
+  }
+
+  .sliders .slider-arrow:nth-child(2) {
+    right: 20px;
+    bottom: 50%;
+    transform: rotate(180deg) translateY(-50%);
+  }
+
+  .sliders p {
+    color: #ffffff;
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}

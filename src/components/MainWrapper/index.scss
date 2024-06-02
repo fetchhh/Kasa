@@ -1,0 +1,20 @@
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 0 4rem;
+  min-height: 70vh;
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+  }
+}
+
+.home-main {
+  gap: 50px;
+  @media (max-width: 768px) {
+    gap: 0;
+  }
+}
+
+.about-main {
+  gap: 30px;
+}

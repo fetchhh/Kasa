@@ -1,0 +1,44 @@
+.card-preview {
+  cursor: pointer;
+  width: 340px;
+  height: 340px;
+  position: relative;
+  border-radius: 10px;
+
+  @media (max-width: 768px) {
+    height: 300px;
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+  }
+
+  h3 {
+    width: 80%;
+    text-align: left;
+    position: absolute;
+    left: 20px;
+    bottom: 0;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 22px;
+    z-index: 3;
+  }
+}
+
+.card-preview::before {
+  // Update gradient
+  background: linear-gradient(180deg, hsla(0, 0%, 100%, 0), rgba(0, 0, 0, 0.5));
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
