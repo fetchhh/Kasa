@@ -5,18 +5,18 @@ import { useFetch } from "../../utils/hooks/";
 import Nav from "../../components/Nav";
 import MainWrapper from "../../components/MainWrapper";
 import Carousel from "../../components/Carousel";
-import Placeinfo from "../../components/Placeinfo";
+import Details from "../../components/Details";
 import Footer from "../../components/Footer";
 import Loader from "../../components/Loader";
 import Error from "../../components/Error";
 
-const Place = () => {
-  const { placeId } = useParams();
+const Property = () => {
+  const { propertyId } = useParams();
 
   let { isLoading, data, error } = useFetch(
     `${location.origin}/data/logements.json`,
   );
-  data = data.filter((item) => item.id == placeId)[0];
+  data = data.filter((item) => item.id == propertyId)[0];
 
   return (
     <>
@@ -32,7 +32,7 @@ const Place = () => {
         ) : data ? (
           <>
             <Carousel pictures={data.pictures} />
-            <Placeinfo
+            <Details
               title={data.title}
               location={data.location}
               description={data.description}
@@ -55,4 +55,4 @@ const Place = () => {
   );
 };
 
-export default Place;
+export default Property;

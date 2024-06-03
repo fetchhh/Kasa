@@ -5,7 +5,7 @@ import "./styles/App.scss";
 // Pages
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Place from "./pages/Place";
+import Property from "./pages/Property";
 import NotFound from "./pages/Errors/NotFound";
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route index element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/place/:placeId" element={<Place />} />
+        <Route path="/property/:propertyId" element={<Property />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

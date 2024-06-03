@@ -7,7 +7,7 @@ import Dropdown from "../../components/Dropdown";
 // Styles
 import "./index.scss";
 
-const Placeinfo = ({
+const Details = ({
   title,
   location,
   description,
@@ -99,7 +99,7 @@ const Placeinfo = ({
   );
 };
 
-Placeinfo.propTypes = {
+Details.propTypes = {
   title: PropTypes.string,
   location: PropTypes.string,
   description: PropTypes.string,
@@ -110,4 +110,4 @@ Placeinfo.propTypes = {
   profile: PropTypes.string,
 };
 
-export default Placeinfo;
+export default Details;

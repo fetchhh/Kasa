@@ -8,7 +8,7 @@ const Card = ({ id, title, cover }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`/place/${id}`);
+    navigate(`/property/${id}`);
   };
 
   return (
