@@ -12,6 +12,8 @@
     display: flex;
     overflow: hidden;
     border-radius: inherit;
+    // Safari issue with border-radius
+    -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
 
     img {
       object-fit: cover;
@@ -28,8 +30,8 @@
     cursor: pointer;
     position: absolute;
     @media (max-width: 768px) {
-      width: 11px;
-      height: 19px;
+      width: 14px;
+      height: 22px;
     }
   }
 
