@@ -26,7 +26,7 @@ const Carousel = ({ pictures }) => {
           />
         ))}
       </div>
-      {images.length > 1 && (
+      {images?.length > 1 && (
         <div className="sliders">
           <svg
             className="slider-arrow"
