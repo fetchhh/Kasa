@@ -26,33 +26,35 @@ const Carousel = ({ pictures }) => {
           />
         ))}
       </div>
-      <div className="sliders">
-        <svg
-          className="slider-arrow"
-          onClick={() => previousIndex()}
-          viewBox="0 0 48 80"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M47.04 7.78312L39.92 0.703125L0.359985 40.3031L39.96 79.9031L47.04 72.8231L14.52 40.3031L47.04 7.78312Z"
-            fill="white"
-          />
-        </svg>
-        <svg
-          className="slider-arrow"
-          onClick={() => nextIndex()}
-          viewBox="0 0 48 80"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M47.04 7.78312L39.92 0.703125L0.359985 40.3031L39.96 79.9031L47.04 72.8231L14.52 40.3031L47.04 7.78312Z"
-            fill="white"
-          />
-        </svg>
-        <span>{`${CarouselIndex + 1} / ${images.length}`}</span>
-      </div>
+      {images.length > 1 && (
+        <div className="sliders">
+          <svg
+            className="slider-arrow"
+            onClick={() => previousIndex()}
+            viewBox="0 0 48 80"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M47.04 7.78312L39.92 0.703125L0.359985 40.3031L39.96 79.9031L47.04 72.8231L14.52 40.3031L47.04 7.78312Z"
+              fill="white"
+            />
+          </svg>
+          <svg
+            className="slider-arrow"
+            onClick={() => nextIndex()}
+            viewBox="0 0 48 80"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M47.04 7.78312L39.92 0.703125L0.359985 40.3031L39.96 79.9031L47.04 72.8231L14.52 40.3031L47.04 7.78312Z"
+              fill="white"
+            />
+          </svg>
+          <span>{`${CarouselIndex + 1} / ${images.length}`}</span>
+        </div>
+      )}
     </div>
   );
 };
