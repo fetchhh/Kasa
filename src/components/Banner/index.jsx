@@ -15,7 +15,7 @@ const Banner = ({ title, filter, image }) => {
       }
     >
       <img src={image} />
-      {title ? <p>{title}</p> : null}
+      {title ? <h1>{title}</h1> : null}
     </div>
   );
 };

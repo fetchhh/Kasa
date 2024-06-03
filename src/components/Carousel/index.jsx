@@ -51,7 +51,7 @@ const Carousel = ({ pictures }) => {
             fill="white"
           />
         </svg>
-        <p>{`${CarouselIndex + 1} / ${images.length}`}</p>
+        <span>{`${CarouselIndex + 1} / ${images.length}`}</span>
       </div>
     </div>
   );

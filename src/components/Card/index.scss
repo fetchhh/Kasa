@@ -22,12 +22,12 @@
     border-radius: inherit;
   }
 
-  h3 {
+  h2 {
     width: 80%;
     text-align: left;
     position: absolute;
     left: 20px;
-    bottom: 0;
+    bottom: 3px;
     color: #ffffff;
     font-size: 17px;
     font-weight: 600;
@@ -37,7 +37,6 @@
 }
 
 .card-preview::before {
-  // Update gradient
   background: linear-gradient(180deg, hsla(0, 0%, 100%, 0), rgba(0, 0, 0, 0.5));
   content: "";
   position: absolute;

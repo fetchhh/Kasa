@@ -34,20 +34,25 @@ const Nav = () => {
             fill="#FF6060"
           />
         </svg>
-        <div className="nav-items">
-          <Link
-            to="/"
-            className={location.pathname == "/" ? "underlined" : null}
-          >
-            Acceuil
-          </Link>
-          <Link
-            to="/about"
-            className={location.pathname == "/about" ? "underlined" : null}
-          >
-            A propos
-          </Link>
-        </div>
+
+        <ul className="nav-items">
+          <li>
+            <Link
+              to="/"
+              className={location.pathname == "/" ? "underlined" : null}
+            >
+              Acceuil
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/about"
+              className={location.pathname == "/about" ? "underlined" : null}
+            >
+              A propos
+            </Link>
+          </li>
+        </ul>
       </nav>
     </>
   );
