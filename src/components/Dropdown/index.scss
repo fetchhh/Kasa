@@ -27,6 +27,13 @@
   }
 
   .dropdown-content {
+    max-height: 500px;
+    transform: scaleY(1);
+    transform-origin: top;
+    transition:
+      max-height 0.7s ease,
+      transform 0.7s ease;
+
     ul,
     p {
       padding: 0 15px;
@@ -49,6 +56,11 @@
   }
 
   .hidden {
-    display: none;
+    max-height: 0;
+    transform: scaleY(0);
+    overflow: hidden;
+    transition:
+      max-height 0.4s ease,
+      transform 0.4s ease;
   }
 }
