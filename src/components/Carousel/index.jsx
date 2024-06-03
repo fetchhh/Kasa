@@ -14,13 +14,22 @@ const Carousel = ({ pictures }) => {
   const previousIndex = () => {
     setCarouselIndex((count) => (count <= 0 ? images.length - 1 : count - 1));
   };
+
   return (
     <div className="carousel">
-      <img className="slide" src={images[CarouselIndex]} />
+      <div className="slide">
+        {images.map((image, index) => (
+          <img
+            key={index}
+            src={image}
+            style={{ transform: `translateX(-${CarouselIndex * 100}%)` }}
+          />
+        ))}
+      </div>
       <div className="sliders">
         <svg
           className="slider-arrow"
-          onClick={() => nextIndex()}
+          onClick={() => previousIndex()}
           viewBox="0 0 48 80"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
