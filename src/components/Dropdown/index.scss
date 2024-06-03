@@ -1,5 +1,6 @@
 .dropdown {
   .dropdown-title {
+    cursor: pointer;
     display: flex;
     align-items: center;
     padding: 0 15px;
@@ -20,7 +21,6 @@
     }
 
     .dropdown-arrow {
-      cursor: pointer;
       width: 24px;
       height: 14px;
     }

@@ -1,5 +1,12 @@
+// Styles
+import "./index.scss";
+
 const Loader = () => {
-  return <h1>Loading</h1>;
+  return (
+    <div className="loader-wrapper">
+      <div className="loader"></div>
+    </div>
+  );
 };
 
 export default Loader;
