@@ -23,21 +23,25 @@
     .dropdown-arrow {
       width: 24px;
       height: 14px;
+      transition: transform 0.3s ease;
+      &.active {
+        transform: rotate(-180deg);
+      }
     }
   }
 
   .dropdown-content {
+    background-color: #fbfbfb;
+    border-radius: 0 0 10px 10px;
     position: relative;
     bottom: 8px;
     z-index: -1;
-    background-color: #fbfbfb;
-    border-radius: 0 0 10px 10px;
-    max-height: 500px;
-    transform: scaleY(1);
+    max-height: 0;
+    transform: scaleY(0);
     transform-origin: top;
     transition:
-      max-height 0.7s ease,
-      transform 0.7s ease;
+      max-height 0.6s ease,
+      transform 0.6s ease;
 
     ul,
     p {
@@ -59,14 +63,10 @@
         font-size: 13px;
       }
     }
-  }
-
-  .hidden {
-    max-height: 0;
-    transform: scaleY(0);
-    overflow: hidden;
-    transition:
-      max-height 0.4s ease,
-      transform 0.4s ease;
+    &.active {
+      max-height: 500px;
+      transform: scaleY(1);
+      overflow: hidden;
+    }
   }
 }

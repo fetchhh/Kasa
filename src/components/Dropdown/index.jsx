@@ -9,7 +9,7 @@ const Dropdown = ({ title, content, state, setState }) => {
       <div className="dropdown-title">
         <p>{title}</p>
         <svg
-          className="dropdown-arrow"
+          className={state ? "dropdown-arrow active" : "dropdown-arrow"}
           viewBox="0 0 24 14"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +20,7 @@ const Dropdown = ({ title, content, state, setState }) => {
           />
         </svg>
       </div>
-      <div className={state ? "dropdown-content" : "dropdown-content hidden"}>
+      <div className={state ? "dropdown-content active" : "dropdown-content"}>
         {Array.isArray(content) ? (
           <ul>
             {content.map((item) => (
