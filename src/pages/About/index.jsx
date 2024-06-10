@@ -3,8 +3,8 @@ import { toggleState } from "../../utils/src/index.jsx";
 import { useState } from "react";
 // Components
 import Nav from "../../components/Nav";
-import MainWrapper from "../../components/MainWrapper";
-import Dropdown from "../../components/Dropdown";
+import Layout from "../../components/Layout";
+import Collapse from "../../components/Collapse";
 import Banner from "../../components/Banner";
 import Footer from "../../components/Footer";
 // Assets
@@ -34,35 +34,35 @@ const About = () => {
   return (
     <>
       <Nav />
-      <MainWrapper cssClass="about-main">
+      <Layout cssClass="about-main">
         <Banner filter={30} image={aboutBanner} />
-        <div className="about-dropdown">
-          <Dropdown
+        <div className="about-collapse">
+          <Collapse
             title="Fiabilité"
             content={aboutContent.fiabilite}
             state={isOpen.fiabilite}
             setState={() => toggleState("fiabilite", setIsOpen)}
           />
-          <Dropdown
+          <Collapse
             title="Respect"
             content={aboutContent.respect}
             state={isOpen.respect}
             setState={() => toggleState("respect", setIsOpen)}
           />
-          <Dropdown
+          <Collapse
             title="Service"
             content={aboutContent.service}
             state={isOpen.service}
             setState={() => toggleState("service", setIsOpen)}
           />
-          <Dropdown
+          <Collapse
             title="Sécurité"
             content={aboutContent.securite}
             state={isOpen.securite}
             setState={() => toggleState("securite", setIsOpen)}
           />
         </div>
-      </MainWrapper>
+      </Layout>
       <Footer />
     </>
   );

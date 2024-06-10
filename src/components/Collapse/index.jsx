@@ -3,13 +3,13 @@ import PropTypes from "prop-types";
 // Styles
 import "./index.scss";
 
-const Dropdown = ({ title, content, state, setState }) => {
+const Collapse = ({ title, content, state, setState }) => {
   return (
-    <div className="dropdown" onClick={() => setState()}>
-      <div className="dropdown-title">
+    <div className="collapse" onClick={() => setState()}>
+      <div className="collapse-title">
         <p>{title}</p>
         <svg
-          className={state ? "dropdown-arrow active" : "dropdown-arrow"}
+          className={state ? "collapse-arrow active" : "collapse-arrow"}
           viewBox="0 0 24 14"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +20,7 @@ const Dropdown = ({ title, content, state, setState }) => {
           />
         </svg>
       </div>
-      <div className={state ? "dropdown-content active" : "dropdown-content"}>
+      <div className={state ? "collapse-content active" : "collapse-content"}>
         {Array.isArray(content) ? (
           <ul>
             {content.map((item) => (
@@ -35,11 +35,11 @@ const Dropdown = ({ title, content, state, setState }) => {
   );
 };
 
-Dropdown.propTypes = {
+Collapse.propTypes = {
   title: PropTypes.string,
   content: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   state: PropTypes.bool,
   setState: PropTypes.func,
 };
 
-export default Dropdown;
+export default Collapse;

@@ -7,7 +7,7 @@ import Error from "../../components/Error";
 // Styles
 import "./index.scss";
 
-const CardsWrapper = () => {
+const CardGroup = () => {
   const { isLoading, data, error } = useFetch(
     `${location.origin}/data/logements.json`,
   );
@@ -34,4 +34,4 @@ const CardsWrapper = () => {
   );
 };
 
-export default CardsWrapper;
+export default CardGroup;

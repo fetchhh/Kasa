@@ -1,6 +1,6 @@
 // Components
 import Nav from "../../../components/Nav";
-import MainWrapper from "../../../components/MainWrapper";
+import Layout from "../../../components/Layout";
 import Error from "../../../components/Error";
 import Footer from "../../../components/Footer";
 
@@ -8,12 +8,12 @@ const NotFound = () => {
   return (
     <>
       <Nav />
-      <MainWrapper>
+      <Layout>
         <Error
           type="404"
           message="Oups! La page que vous demandez n'existe pas."
         />
-      </MainWrapper>
+      </Layout>
       <Footer />
     </>
   );

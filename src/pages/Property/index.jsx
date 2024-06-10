@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { useFetch } from "../../utils/hooks/";
 // Components
 import Nav from "../../components/Nav";
-import MainWrapper from "../../components/MainWrapper";
+import Layout from "../../components/Layout";
 import Carousel from "../../components/Carousel";
 import Details from "../../components/Details";
 import Footer from "../../components/Footer";
@@ -21,7 +21,7 @@ const Property = () => {
   return (
     <>
       <Nav />
-      <MainWrapper cssClass="place-main">
+      <Layout cssClass="place-main">
         {error ? (
           <Error
             type="500"
@@ -49,7 +49,7 @@ const Property = () => {
             message="Oups! La page que vous demandez n'existe pas."
           />
         )}
-      </MainWrapper>
+      </Layout>
       <Footer />
     </>
   );

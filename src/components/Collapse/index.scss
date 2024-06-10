@@ -1,5 +1,5 @@
-.dropdown {
-  .dropdown-title {
+.collapse {
+  .collapse-title {
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -20,7 +20,7 @@
       }
     }
 
-    .dropdown-arrow {
+    .collapse-arrow {
       width: 24px;
       height: 14px;
       transition: transform 0.3s ease;
@@ -30,7 +30,7 @@
     }
   }
 
-  .dropdown-content {
+  .collapse-content {
     background-color: #fbfbfb;
     border-radius: 0 0 10px 10px;
     position: relative;

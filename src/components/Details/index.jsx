@@ -3,7 +3,7 @@ import { toggleState } from "../../utils/src/index.jsx";
 import { useState } from "react";
 import PropTypes from "prop-types";
 // Components
-import Dropdown from "../../components/Dropdown";
+import Collapse from "../../components/Collapse";
 // Styles
 import "./index.scss";
 
@@ -79,7 +79,7 @@ const Details = ({
       </div>
       <div className="place-description">
         <div className="place-dropdown">
-          <Dropdown
+          <Collapse
             title="Description"
             content={description}
             state={isOpen.description}
@@ -87,7 +87,7 @@ const Details = ({
           />
         </div>
         <div className="place-dropdown">
-          <Dropdown
+          <Collapse
             title="Équipements"
             content={equipments}
             state={isOpen.equipments}
